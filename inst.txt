@@ -1,0 +1,34 @@
+1)npx hardhat run scripts/deploy.js
+2) npm install create-react-app
+3) npx create-react-app client 
+
+
+
+a)contract
+b)hardhat
+c)reactjs
+d)interaction with smartcontract using artifiacts
+
+
+cd client
+npm start
+
+
+Goreli test network
+
+
+https://goreli.infura.io/v3/
+
+5
+
+GoreliTEH
+
+
+sepholia
+0xEe001d5368285E0438541b5330022E1b47f0BDfd
+
+goreli
+
+0xEe001d5368285E0438541b5330022E1b47f0BDfd
+
+smartcontract pi is used to iinteract with js which is stored in artifact

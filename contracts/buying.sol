@@ -1,0 +1,31 @@
+//SPDX-License-Identifier:MIT
+pragma solidity ^0.8.0;
+
+contract buying {
+    struct Memo {
+        string name; //name of sender
+        string message; //message froom sender
+        uint256 timestamp; //timestamp of sender
+        address from; //address of sender
+    }
+
+    Memo[] memos; //dynamic array to store the above messages
+    address payable owner;
+
+    constructor() {
+        owner = payable(msg.sender); //paybale is used as we need to receive,msg.senderr is like this in js as to reffer
+    }
+
+    function buyProduct(
+        string memory name,
+        string memory message
+    ) public payable {
+        require(msg.value >= 0, "Please pay greater than 0");
+        owner.transfer(msg.value);
+        memos.push(Memo(name, message, block.timestamp, msg.sender)); //push alll the values in dynamic array created
+    }
+
+    function getMemos() public view returns (Memo[] memory) {
+        return memos;
+    }
+}
